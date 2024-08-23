@@ -1,0 +1,41 @@
+<!-- navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger"
+            style="font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;"
+            href="index.html#">
+            <b>{{ .Site.Params.navigation.title }}</b>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+                {{- $sections := .Site.Params.navigation.sections -}}
+                {{ range $section := $sections }}
+                <li class="nav-item">
+                    <a class="nav-link"
+                        href="index.html#{{ $section | urlize }}">
+                        {{ $section | title }}
+                    </a>
+                </li>
+                {{ end }}
+
+                {{- $attachments := .Site.Params.navigation.attachments -}}
+                {{ range $key, $value := $attachments }}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ $value | relURL }}"
+                        target="_blank">
+                        <b><i class="fa fa-file-pdf-o"></i> {{ $key | title
+                            }}</b></a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</nav>

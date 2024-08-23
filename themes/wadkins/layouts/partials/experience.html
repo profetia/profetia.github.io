@@ -1,0 +1,40 @@
+<!-- experience -->
+<section class="content-section bg-light" id="experience">
+    <div class="container">
+        <div class="content-section-heading text-center">
+            <h2 class="mb-2">Experience</h2>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="timeline">
+                    {{- $experience := .Site.Params.experience -}}
+                    {{ range $key, $value := $experience }}
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img
+                                class="rounded-circle img-fluid"
+                                src="{{ $value.profile }}"
+                                alt="{{ $value.institute }}" />
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 style="color:darkorange">{{ $value.institute
+                                    }}</h4>
+                                <h5>{{ $value.title }}</h5>
+                                <h6>
+                                    {{ $value.start }} - {{ $value.end }} ·
+                                    {{ $value.location }}</h6>
+                            </div>
+                            <div class="timeline-body">
+                                <p>
+                                    {{ $value.description | markdownify }}
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

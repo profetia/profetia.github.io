@@ -1,0 +1,19 @@
+<!-- welcome -->
+<header class="masthead d-flex" style="padding-bottom: 100px">
+    <div class="container text-center my-auto">
+        <h1 class="mb-1">
+            {{ .Site.Params.welcome.title }}
+        </h1>
+        <br>
+        <h3 class="mb-5">
+            {{- $subtitles := .Site.Params.welcome.subtitles -}}
+            {{- range $subtitle := $subtitles -}}
+            <em>{{ $subtitle }}</em>
+            <br>
+            {{- end -}}
+        </h3>
+        <a class="btn btn-xl btn-light js-scroll-trigger"
+            href="index.html#about">Enter Portfolio</a>
+    </div>
+    <div class="overlay"></div>
+</header>

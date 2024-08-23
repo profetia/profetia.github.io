@@ -1,0 +1,50 @@
+<!-- publication -->
+<section class="content-section" id="publications">
+    <div class="container">
+        <div class="content-section-heading text-center">
+            <h2 class="mb-2">Publications</h2>
+            Note: * indicates equal contribution.
+        </div>
+        <br>
+        <div class="row text-center">
+            <table
+                style="width:150%;border:0;border-spacing:10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                <tbody>
+                    {{- $publications := .Site.Params.publications -}}
+                    {{ range $key, $value := $publications }}
+                    <tr>
+                        <td width="350px">
+                            <img src="{{ $value.profile }}" width="300px"
+                                style="box-shadow: 4px 4px 8px #888"
+                                class="center" alt="...">
+                        </td>
+                        <td align="left"
+                            style="display:flex; flex-direction: column;">
+                            <a class="lead" target="blank">
+                                <h5 class="mb-0">{{ $value.title }}</h5>
+                            </a>
+                            <p style="font-size: 18px; line-height:23px">
+                                {{- $authors := $value.authors -}}
+                                {{ range $index, $author := $authors }}
+                                {{- if eq $index 0 -}}
+                                {{- $author | markdownify -}}
+                                {{- else -}}
+                                {{- ", " -}}
+                                {{- $author | markdownify -}}
+                                {{- end -}}
+                                {{- end -}}
+                                <br>
+                                {{- $value.conference | markdownify -}}
+                                <br>
+                                {{- $medias := $value.medias -}}
+                                {{ range $media := $medias }}
+                                [{{- $media | markdownify -}}]
+                                {{- end -}}
+                            </td>
+                        </tr>
+                        {{ end }}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>

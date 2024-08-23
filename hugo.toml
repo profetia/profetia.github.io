@@ -1,4 +1,210 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://profetia.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'About Me'
 theme = "wadkins"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+
+[params]
+favicon = "images/favicon.ico"
+
+
+[params.navigation]
+title = "Nicolas Yang"
+sections = [
+    "About",
+    "Education",
+    "Experience",
+    "Publications",
+    "Skills",
+    "Contact",
+]
+attachments = { cv = "documents/cv__2408.pdf" }
+
+
+[params.welcome]
+title = "Linshu (Nicolas) Yang"
+subtitles = ["Undergraduate Student @ ShanghaiTech University"]
+
+
+[params.about]
+names = ["Linshu (Nicolas) Yang", "杨林树"]
+socials = [
+    { icon = "fa-envelope", url = "mailto:yanglsh@shanghaitech.edu.cn" },
+    { icon = "fa-github", url = "https://profetia.github.com" },
+    { icon = "fa-linkedin", url = "https://www.linkedin.com/in/linshu-yang-3398a425a/" },
+]
+profile = "images/profile_yank_rec.jpg"
+
+degrees = [
+    "ShanghaiTech University 2025', B.Eng. Candidate in Computer Science",
+]
+introduction = """
+I'm currently a senior undergraduate student majoring in Computer Science and Technology at [ShanghaiTech University](https://www.shanghaitech.edu.cn/eng/), supervised by [Prof. Xiran Cai](http://sist.shanghaitech.edu.cn/caixr/main.htm). And I am currently a research intern at [Z-Lab](https://www.yangzhice.com/) at ShanghaiTech, advised by [Prof. Zhice Yang](https://www.yangzhice.com/). 
+
+My research interests are in the broad areas of computer systems, ranging from operating systems, computer architecture, to networked systems. My current research focuses on wirelss and cyber-physical systems, in cooperation with [Yuzhou Lu](https://github.com/Yuzhou-Lu/) from ShanghaiTech.
+"""
+cv = "documents/cv__2408.pdf"
+[[params.about.news]]
+date = "Aug. 2024"
+content = "One paper finished at Shanghaitech Z-Lab was submitted to HPCA 2025."
+[[params.about.news]]
+date = "Apr. 2024"
+content = "I joined Keen Security Lab at Tencent as a system R&D intern."
+[[params.about.news]]
+date = "Dec. 2023"
+content = "I joined Prof. Zhice Yang's Z-Lab at ShanghaiTech as a research intern."
+
+
+[[params.education]]
+institute = "ShanghaiTech University"
+degree = "B.Eng. Candidate in Computer Science"
+location = "Pudong, Shanghai, China"
+start = "Sep. 2021"
+end = "June. 2025 (Expected)"
+profile = "images/shtech.jpg"
+description = """
+Overall GPA: 3.72/4.0
+
+Merit Student of 2021-2022 Academic Year
+"""
+[[params.education]]
+institute = "Chengdu No.7 High School"
+degree = ""
+location = "Chengdu, Sichuan, China"
+start = "Sep. 2018"
+end = "Jul. 2021"
+profile = "images/cdqz.png"
+description = """
+Level 6 in Certified Software Professional 2019, Senior Track
+"""
+
+
+[[params.experience]]
+institute = "Tencent, Keen Security Lab"
+title = "System R&D Intern"
+location = "Xuhui, Shanghai, China"
+start = "Apr. 2024"
+end = "July. 2024"
+profile = "images/tencent.png"
+description = """
+Working for the development of Keen's tactic intelligence system, including streamlining the grpc gateway of the tactic database and constructing linux sandbox with kernel modules and eBPF.
+"""
+[[params.experience]]
+institute = "ShanghaiTech University, Z-Lab"
+title = "Research Intern"
+location = "Pudong, Shanghai, China"
+start = "Dec. 2023"
+end = "Aug. 2024"
+profile = "images/shtech.jpg"
+description = """
+Topic: 
+1. Understanding Precision Time Protocol in Embedded Systems.
+2. Targeted Exploitation of Vulnerabilities in a Popular Commodity LIDAR Model.
+3. Understanding Hybrid Scheduling in Asymmetric Processors.
+
+Advisor: [Prof. Zhice Yang](www.yangzhice.com)
+"""
+[[params.experience]]
+institute = "Deemos Technology"
+title = "Software Engineer Intern"
+location = "Pudong, Shanghai, China"
+start = "Jan. 2023"
+end = "July. 2023"
+profile = "images/deemos.png"
+description = """
+Working for the development of Deemos' interactive avatar system based on ChatAvatar, a text to 3D generation model, and tools for Blender.
+"""
+[[params.experience]]
+institute = "ShanghaiTech University, HCPS Lab"
+title = "Research Intern"
+location = "Pudong, Shanghai, China"
+start = "July. 2022"
+end = "June. 2023"
+profile = "images/shtech.jpg"
+description = """
+Topic: Model-Checking-Based Diagnosis Assistance for Cardiac Ablation
+
+Advisor: [Prof. Zhihao Jiang](http://sist.shanghaitech.edu.cn/jiangzhh/main.htm)
+"""
+
+
+[[params.publications]]
+title = "Understanding Hybrid Scheduling in Asymmetric Processors"
+authors = [
+    "[Chenfei Gao](https://yangzhice.com/)",
+    "<u>**Linshu Yang**</u>",
+    "[Zhice Yang](https://yangzhice.com/)",
+]
+conference = "Under Review in HPCA 2025"
+profile = "images/hpca25.png"
+medias = ["[Paper](documents/hpca2025.pdf)"]
+[[params.publications]]
+title = "pyUPPAAL: A Python Package for Risk Analysis of CPS"
+authors = [
+    "[Guangyao Chen](https://github.com/Jack0Chan/)",
+    "<u>**Linshu Yang**</u>",
+    "[Haochen Yang](https://github.com/mole-h-6011)",
+    "[Peilin He](https://github.com/Uniontake)",
+    "[Zhihao Jiang](http://sist.shanghaitech.edu.cn/jiangzhh/main.htm)",
+]
+conference = "Accepted in ICCPS 2023 Poster Session"
+profile = "images/iccps23.png"
+medias = [
+    "[Paper](https://dl.acm.org/doi/10.1145/3576841.3589611)",
+    "[Code](https://github.com/Jack0Chan/PyUPPAAL)",
+]
+
+
+[[params.skills]]
+name = "Python"
+logo = "images/logos/python.svg"
+[[params.skills]]
+name = "C"
+logo = "images/logos/c.svg"
+[[params.skills]]
+name = "C++"
+logo = "images/logos/cpp.svg"
+[[params.skills]]
+name = "Rust"
+logo = "images/logos/rust.svg"
+[[params.skills]]
+name = "Go"
+logo = "images/logos/go.svg"
+[[params.skills]]
+name = "TypeScript"
+logo = "images/logos/ts.svg"
+[[params.skills]]
+name = "Shell"
+logo = "images/logos/shell.svg"
+[[params.skills]]
+name = "Matlab"
+logo = "images/logos/matlab.png"
+[[params.skills]]
+name = "PyTorch"
+logo = "images/logos/pytorch.svg"
+[[params.skills]]
+name = "OpenMP"
+logo = "images/logos/openmp.png"
+[[params.skills]]
+name = "Linux"
+logo = "images/logos/linux.svg"
+[[params.skills]]
+name = "eBPF"
+logo = "images/logos/ebpf.webp"
+[[params.skills]]
+name = "Docker"
+logo = "images/logos/docker.svg"
+[[params.skills]]
+name = "React"
+logo = "images/logos/react.svg"
+
+
+[[params.contact]]
+title = "Email"
+content = "[yanglsh@shanghaitech.edu.cn](mailto:yanglsh@shanghaitech.edu.cn)"
+[[params.contact]]
+title = "Current address"
+content = "Pudong, Shanghai, China"

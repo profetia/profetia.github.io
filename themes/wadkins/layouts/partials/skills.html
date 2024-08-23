@@ -1,0 +1,25 @@
+<!-- skills -->
+<section class="content-section bg-primary text-white text-center" id="skills">
+    <div class="container">
+        <div class="content-section-heading">
+            <!--<h3 class="text-secondary mb-0">Skills</h3>-->
+            <h2 class="mb-2">Skills</h2>
+        </div>
+        <br>
+        <div class="row" style="margin-bottom: 48px; justify-content: center">
+            {{- $skills := .Site.Params.skills -}}
+            {{ range $skill := $skills }}
+            <div class="col-lg-3 col-md-6 mb-5">
+                <span
+                    class="service-icon rounded-circle mx-auto mb-3 text-secondary">
+                    <img src="{{ $skill.logo }}" width="60%" alt
+                        style="margin-top:-12px;">
+                </span>
+                <h4>
+                    <b>{{ $skill.name }}</b>
+                </h4>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

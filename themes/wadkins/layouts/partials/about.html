@@ -1,0 +1,63 @@
+<!-- about -->
+<section class="content-section"
+    style="background:#edeeef; padding-top: 4rem; padding-bottom: 6rem"
+    id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-4">
+                <div class="team-member" style="margin-bottom:24px">
+                    <img src="{{ .Site.Params.about.profile }}"
+                        style="border:8px solid white; width:350px!important; height:100%"
+                        class="img-responsive img-circle" alt=".Title">
+                    <div id="social1" class="mt-4">
+                        <ul class="list-inline social-buttons">
+                            {{- $socials := .Site.Params.about.socials -}}
+                            {{ range $key, $value := $socials }}
+                            <li class="text-center">
+                                <a href="{{ $value.url }}"
+                                    target="blank"><i
+                                        class="fa {{ $value.icon }}"></i></a>
+                                {{ end }}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-8" id="intro-section"
+                    style="margin-bottom: 1rem; margin-top:1rem">
+                    <h4>
+                        {{- $names := .Site.Params.about.names -}}
+                        {{ range $name := $names }}
+                        <span>{{ $name }}</span>
+                        {{ end }}
+                    </h4>
+
+                    {{- $degrees := .Site.Params.about.degrees -}}
+                    {{ range $degree := $degrees }}
+                    <p style="font-size: 15pt"><b>{{ $degree }}</b></p>
+                    {{ end }}
+
+                    <p style="font-size: 14pt">
+                        {{- .Site.Params.about.introduction | markdownify -}}
+                    </p>
+
+                    <p style="font-size: 14pt">For more information please see
+                        my <a
+                            class="link" href="{{ .Site.Params.about.cv }}"
+                            target="blank">Curriculum Vitae</a>.</p>
+
+                    {{- $news := .Site.Params.about.news -}}
+                    {{ if gt (len $news) 0 }}
+                    <p
+                        style="font-size: 16pt; margin-bottom:0;"><b>News:</b></p>
+                    <ul style="padding-left:30px">
+                        {{ range $key, $value := $news }}
+                        <li style="font-size: 14pt"><b>[{{ $value.date
+                                }}]</b> {{
+                            $value.content | markdownify }}</li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </section>

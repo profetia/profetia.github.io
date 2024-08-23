@@ -1,0 +1,40 @@
+<!-- education -->
+<section class="content-section" id="education">
+    <div class="container">
+        <div class="content-section-heading text-center">
+            <h2 class="mb-2">Education</h2>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="timeline">
+                    {{- $education := .Site.Params.education -}}
+                    {{ range $key, $value := $education }}
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img
+                                class="rounded-circle img-fluid"
+                                src="{{ $value.profile }}"
+                                alt="{{ $value.institute }}" />
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 style="color:darkorange">{{ $value.institute
+                                    }}</h4>
+                                <h5>{{ $value.degree }}</h5>
+                                <h6>
+                                    {{ $value.start }} - {{ $value.end }} ·
+                                    {{ $value.location }}</h6>
+                            </div>
+                            <div class="timeline-body">
+                                <p>
+                                    {{ $value.description | markdownify }}
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
