@@ -27,6 +27,7 @@ attachments = { cv = "documents/cv__2408.pdf" }
 [params.welcome]
 title = "Linshu (Nicolas) Yang"
 subtitles = ["Undergraduate Student @ ShanghaiTech University"]
+background = "images/welcome.jpg"
 
 
 [params.about]

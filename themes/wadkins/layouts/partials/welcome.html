@@ -1,5 +1,10 @@
 <!-- welcome -->
-<header class="masthead d-flex" style="padding-bottom: 100px">
+<header
+    class="masthead d-flex"
+    style='padding-bottom: 100px; 
+           background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), no-repeat url("{{ .Site.Params.welcome.background }}");
+           background-size: cover;
+    '>
     <div class="container text-center my-auto">
         <h1 class="mb-1">
             {{ .Site.Params.welcome.title }}
