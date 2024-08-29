@@ -1,6 +1,6 @@
 baseURL = 'https://profetia.github.io/'
 languageCode = 'en-us'
-title = 'About Me'
+title = 'Nicolas Yang'
 theme = "wadkins"
 
 [markup.goldmark.renderer]
@@ -12,7 +12,6 @@ favicon = "images/favicon.ico"
 
 
 [params.navigation]
-title = "Nicolas Yang"
 sections = [
     "About",
     "Education",
