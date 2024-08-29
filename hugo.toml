@@ -195,6 +195,12 @@ logo = "images/logos/linux.svg"
 name = "eBPF"
 logo = "images/logos/ebpf.webp"
 [[params.skills]]
+name = "Uppaal"
+logo = "images/logos/uppaal.jpg"
+[[params.skills]]
+name = "Dafny"
+logo = "images/logos/dafny.jpg"
+[[params.skills]]
 name = "Docker"
 logo = "images/logos/docker.svg"
 [[params.skills]]
