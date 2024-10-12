@@ -20,7 +20,7 @@ sections = [
     "Skills",
     "Contact",
 ]
-attachments = { cv = "documents/cv__2409.pdf" }
+attachments = { cv = "documents/cv__2410.pdf" }
 
 
 [params.welcome]
@@ -46,7 +46,7 @@ I'm a senior undergraduate student majoring in Computer Science and Technology a
 
 My research interests are in the broad areas of computer systems, ranging from operating systems, computer architecture, to networked systems. My current research focuses on optical and data center networks, in cooperation with [Dr. Jialong Li](https://www.mpi-inf.mpg.de/departments/rg2/people/jialong-li) from MPI.
 """
-cv = "documents/cv__2409.pdf"
+cv = "documents/cv__2410.pdf"
 [[params.about.news]]
 date = "Sep. 2024"
 content = "I joined Network and Cloud Systems Group at Max Planck Institute for Informatics as a research intern."
