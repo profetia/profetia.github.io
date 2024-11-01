@@ -154,7 +154,7 @@ authors = [
 ]
 conference = "Under Review in HPCA 2025"
 profile = "images/hpca25.png"
-medias = ["[Paper](documents/hpca2025.pdf)"]
+medias = ["[Paper](documents/hpca25.pdf)"]
 [[params.publications]]
 title = "pyUPPAAL: A Python Package for Risk Analysis of CPS"
 authors = [
