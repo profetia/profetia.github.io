@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   const d = new Date();
   const hours = d.getHours();
   const night = hours >= 19 || hours <= 7; // between 7pm and 7am
@@ -11,7 +11,7 @@ $(function() {
     body.classList.add('night');
   }
 
-  toggle.addEventListener('click', function() {
+  toggle.addEventListener('click', function () {
     const isChecked = input.checked;
     if (isChecked) {
       body.classList.remove('night');
@@ -26,7 +26,7 @@ $(function() {
 
   window.addEventListener(
     'scroll',
-    function() {
+    function () {
       if (window.scrollY > introHeight) {
         $topButton.fadeIn();
       } else {
@@ -36,7 +36,7 @@ $(function() {
     false
   );
 
-  topButton.addEventListener('click', function() {
+  topButton.addEventListener('click', function () {
     $('html, body').animate({ scrollTop: 0 }, 500);
   });
 
@@ -44,20 +44,20 @@ $(function() {
 
   function waveOnLoad() {
     hand.classList.add('wave');
-    setTimeout(function() {
+    setTimeout(function () {
       hand.classList.remove('wave');
     }, 2000);
   }
 
-  setTimeout(function() {
+  setTimeout(function () {
     waveOnLoad();
   }, 1000);
 
-  hand.addEventListener('mouseover', function() {
+  hand.addEventListener('mouseover', function () {
     hand.classList.add('wave');
   });
 
-  hand.addEventListener('mouseout', function() {
+  hand.addEventListener('mouseout', function () {
     hand.classList.remove('wave');
   });
 
@@ -70,8 +70,9 @@ $(function() {
   });
 
   sr.reveal('.background');
-  sr.reveal('.skills');
-  sr.reveal('.experience', { viewFactor: 0.2 });
-  sr.reveal('.featured-projects', { viewFactor: 0.1 });
   sr.reveal('.other-projects', { viewFactor: 0.05 });
+  sr.reveal('.experience', { viewFactor: 0.2 });
+  sr.reveal('.skills');
+  // sr.reveal('.featured-projects', { viewFactor: 0.1 });
+
 });

@@ -2,14 +2,23 @@
   .project {
     max-width: 600px;
     margin-bottom: 50px;
+
     &__name {
       margin-bottom: 10px;
     }
+
     p {
       font-size: 0.9rem;
       margin-bottom: 20px;
     }
+
     &__used {
+      &__label {
+        display: inline-block;
+        margin: 3px 3px 3px 0;
+        font-size: .8rem;
+      }
+
       &__item {
         display: inline-block;
         margin: 3px 3px 3px 0;
@@ -17,14 +26,79 @@
         font-size: 0.75rem;
         font-weight: 700;
         padding: 2px 7px;
-        border-radius: 3px;
-        color: $blue;
-        border: 1px solid $blue;
-        background: transparent;
+        color: #007bff;
+        background: 0 0;
+        box-shadow: inset 0 0 0 1px #007bff;
+        transition: color .2s .06667s;
+        position: relative;
+
         &:first-of-type {
           margin-left: 0;
         }
       }
+
+
+
+      &__item::after,
+      &__item::before {
+        border: 0 solid transparent;
+        box-sizing: border-box;
+        content: '';
+        pointer-events: none;
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 0;
+        left: 0
+      }
+
+      &__item::before {
+        border-top-width: 2px;
+        border-right-width: 2px
+      }
+
+      &__item::after {
+        border-bottom-width: 2px;
+        border-left-width: 2px
+      }
+
+      &__item:hover {
+        color: #7d0ce8
+      }
+
+      &__item:hover::after,
+      &__item:hover::before {
+        border-color: #7d0ce8;
+        -webkit-transition: border-color 0s, width .2s, height .2s;
+        transition: border-color 0s, width .2s, height .2s;
+        width: 100%;
+        height: 100%
+      }
+
+      &__item:hover::before {
+        -webkit-transition-delay: 0s, 0s, .2s;
+        transition-delay: 0s, 0s, .2s
+      }
+
+      &__item:hover::after {
+        -webkit-transition-delay: 0s, .2s, 0s;
+        transition-delay: 0s, .2s, 0s
+      }
+
+      &__item:hover {
+        color: #7d0ce8
+      }
+
+      .night &__item:hover {
+        color: #bae67e;
+      }
+
+      .night &__item:hover::after,
+      .night &__item:hover::before {
+        border-color: #bae67e
+      }
     }
   }
+
+  padding-bottom: 50px;
 }

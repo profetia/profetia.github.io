@@ -1,33 +1,26 @@
 languages:
-  - item: JavaScript (ES6)
-  - item: TypeScript
-  - item: HTML
-  - item: CSS/Sass
+  - item: "{C, C++, CUDA C/C++}"
+  - item: "{OpenMP, MPI}"
+  - item: Rust
   - item: Python
-  - item: SQL
-  - item: R
+  - item: "{RISC-V, x86} Assembly"
+  - item: Golang
+  - item: "{JavaScript, TypeScript}"
 
-frameworks:
-  - item: Ember & Glimmer
-  - item: React
-  - item: Jekyll
-  - item: Node
-  - item: D3
-  - item: Wordpress
-  - item: Timber
+codebases:
+  - item: Linux Kernel
+  - item: Megatron LM
+  - item: Vllm
+  - item: LMCache
+  - item: Rust Clippy
 
-tools:
-  - item: Bash
-  - item: Git & Github
-  - item: Gulp & Grunt
-  - item: Chrome DevTools
-  - item: Postman
-  - item: MongoDB
-
-design:
-  - item: Sketch
-  - item: InDesign
-  - item: InVision
-  - item: Prototyping
-  - item: Wireframing
-  - item: User Testing
+misc:
+  - item: "Linux {NixOS, Debian}"
+  - item: "{Bash, Zsh}"
+  - item: "{Vim, VSCode}"
+  - item: "Git & {Github, GitLab}"
+  - item: "{GDB, Intel VTune, Nvidia Nsight}"
+  - item: "{Docker, Singularity}"
+  - item: "{Markdown, LaTeX}"
+  - item: "{Slurm, Kubernetes}"
+  - item: "{Module, Spack, Conda}"
