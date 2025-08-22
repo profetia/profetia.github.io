@@ -2,10 +2,10 @@
 name: Linshu Yang
 title: Linshu Yang
 description: A first-year Computer Science master's student
-url: https://profetia.github.io/
+url: https://mpi.run/
 baseurl: ''
 email: linshuy2@illinois.edu
-logo: https://bchiang7.github.io/img/emojis/technologist.png
+logo: /img/emojis/tree.png
 resume: /static/docs/resume.pdf
 social:
   - title: resume
