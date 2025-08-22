@@ -5,6 +5,10 @@
 
     &__name {
       margin-bottom: 10px;
+
+      &__link {
+        white-space: normal;
+      }
     }
 
     p {
@@ -36,8 +40,6 @@
           margin-left: 0;
         }
       }
-
-
 
       &__item::after,
       &__item::before {
