@@ -9,8 +9,8 @@ languages:
 
 codebases:
   - item: Linux Kernel
-  - item: Megatron LM
-  - item: Vllm
+  - item: Megatron-LM
+  - item: vLLM
   - item: LMCache
   - item: Rust Clippy
 

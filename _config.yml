@@ -6,10 +6,10 @@ url: https://mpi.run/
 baseurl: ''
 email: linshuy2@illinois.edu
 logo: /img/emojis/tree.png
-resume: /static/docs/resume.pdf
+resume: /files/cv.pdf
 social:
   - title: resume
-    url: /static/docs/resume.pdf
+    url: /files/cv.pdf
   - title: email
     url: mailto:linshuy2@illinois.edu
   - title: github
